@@ -1,0 +1,3 @@
+# Ignorar configuraciones de usuario de Xcode
+TAU.xcodeproj/project.xcworkspace/xcuserdata/
+TAU.xcodeproj/xcuserdata/
