@@ -9,8 +9,11 @@ class TAUUITestBase: XCTestCase {
     override func setUpWithError() throws {
         super.setUp()
         continueAfterFailure = false
-        app.launch()
+        
+        let device = XCUIDevice.shared
+        device.orientation = .portrait// Asegura que la orientación sea vertical
         app.launchArguments.append("--reset-session")
+        app.launch()
 
         
     }

@@ -12,13 +12,13 @@ final class TAUUITests: TAUUITestBase { //Extended from XCTestCase
 
     
     func testThanksYouMessage() throws {
- 
+        
         let enterCity =  app.textFields["city"]
         enterCity.tap()
         enterCity.typeText("Hey Conrad!")
         app.buttons["enrollButton"].tap()
         XCTAssertTrue(app.staticTexts["Thanks for Joining!"].exists)
-            }
+    }
     
     func testDb() throws {
  

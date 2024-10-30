@@ -15,6 +15,8 @@
 		9B5BC723220F55D20047CFA4 /* TAUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5BC722220F55D20047CFA4 /* TAUTests.swift */; };
 		E620B4252CCFC3E600E6971D /* BDDTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E620B4242CCFC3E600E6971D /* BDDTest.swift */; };
 		E6543FBD2CCECC1000D463EE /* TAUUITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6543FBC2CCECC1000D463EE /* TAUUITestBase.swift */; };
+		E674EA2B2CD2B7970062C856 /* TAUSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674EA2A2CD2B7970062C856 /* TAUSteps.swift */; };
+		E674EA2D2CD2B7AF0062C856 /* TAUElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674EA2C2CD2B7AF0062C856 /* TAUElements.swift */; };
 		E6D42AAF2CCDB07E00B12DD7 /* TAUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D42AAE2CCDB07E00B12DD7 /* TAUUITests.swift */; };
 		E6D42AB12CCDB07E00B12DD7 /* TAUUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D42AB02CCDB07E00B12DD7 /* TAUUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		9B5BC724220F55D20047CFA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E620B4242CCFC3E600E6971D /* BDDTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BDDTest.swift; sourceTree = "<group>"; };
 		E6543FBC2CCECC1000D463EE /* TAUUITestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUUITestBase.swift; sourceTree = "<group>"; };
+		E674EA2A2CD2B7970062C856 /* TAUSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUSteps.swift; sourceTree = "<group>"; };
+		E674EA2C2CD2B7AF0062C856 /* TAUElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUElements.swift; sourceTree = "<group>"; };
 		E6D42AAC2CCDB07E00B12DD7 /* TAUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TAUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D42AAE2CCDB07E00B12DD7 /* TAUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUUITests.swift; sourceTree = "<group>"; };
 		E6D42AB02CCDB07E00B12DD7 /* TAUUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAUUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -121,13 +125,47 @@
 			path = TAUTests;
 			sourceTree = "<group>";
 		};
+		E674EA2E2CD2B85E0062C856 /* XCUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				E674EA2C2CD2B7AF0062C856 /* TAUElements.swift */,
+			);
+			path = XCUIElements;
+			sourceTree = "<group>";
+		};
+		E674EA2F2CD2B8690062C856 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				E674EA2A2CD2B7970062C856 /* TAUSteps.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		E674EA312CD2B8900062C856 /* Base  */ = {
+			isa = PBXGroup;
+			children = (
+				E6543FBC2CCECC1000D463EE /* TAUUITestBase.swift */,
+			);
+			path = "Base ";
+			sourceTree = "<group>";
+		};
+		E674EA322CD2B8BA0062C856 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E6D42AB02CCDB07E00B12DD7 /* TAUUITestsLaunchTests.swift */,
+				E620B4242CCFC3E600E6971D /* BDDTest.swift */,
+				E6D42AAE2CCDB07E00B12DD7 /* TAUUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		E6D42AAD2CCDB07E00B12DD7 /* TAUUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E6D42AAE2CCDB07E00B12DD7 /* TAUUITests.swift */,
-				E6D42AB02CCDB07E00B12DD7 /* TAUUITestsLaunchTests.swift */,
-				E6543FBC2CCECC1000D463EE /* TAUUITestBase.swift */,
-				E620B4242CCFC3E600E6971D /* BDDTest.swift */,
+				E674EA322CD2B8BA0062C856 /* Tests */,
+				E674EA312CD2B8900062C856 /* Base  */,
+				E674EA2F2CD2B8690062C856 /* Steps */,
+				E674EA2E2CD2B85E0062C856 /* XCUIElements */,
 			);
 			path = TAUUITests;
 			sourceTree = "<group>";
@@ -282,8 +320,10 @@
 			files = (
 				E6D42AAF2CCDB07E00B12DD7 /* TAUUITests.swift in Sources */,
 				E6543FBD2CCECC1000D463EE /* TAUUITestBase.swift in Sources */,
+				E674EA2B2CD2B7970062C856 /* TAUSteps.swift in Sources */,
 				E620B4252CCFC3E600E6971D /* BDDTest.swift in Sources */,
 				E6D42AB12CCDB07E00B12DD7 /* TAUUITestsLaunchTests.swift in Sources */,
+				E674EA2D2CD2B7AF0062C856 /* TAUElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
