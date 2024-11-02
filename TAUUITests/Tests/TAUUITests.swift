@@ -33,7 +33,7 @@ final class TAUUITests: TAUUITestBase { //Extended from XCTestCase
         XCTAssert(app.staticTexts["enterCity"].exists)
 
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Use XCTAssert and related functions to verify your tests produce the correct results. 
     }
     
     func testSeeDB() throws {

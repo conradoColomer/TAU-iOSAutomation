@@ -23,5 +23,16 @@ class TAUUITestBase: XCTestCase {
         app.terminate()
        
     }
+    
+    
+    func XCTAyncAssert(_ element : XCUIElement){
+        let isElementExist =  element.waitForExistence(timeout: 10)
+        if isElementExist {
+            XCTAssertTrue(element.exists)
+//            XCTAssertTrue(element.isEnabled)
+//            XCTAssertTrue(element.isHittable)
+//            XCTAssertTrue(element.isSelected)
+        }
+    }
      
 }

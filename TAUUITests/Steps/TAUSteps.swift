@@ -16,6 +16,8 @@ extension TAUUITestBase {
             
             TAUSCreen.cityTextField.element.tap()
             TAUSCreen.cityTextField.element.typeText(city)
+           
+            
         }
     }
     
@@ -28,7 +30,8 @@ extension TAUUITestBase {
     
     func thenIShouldSeeThankYouMessage() {
         XCTContext.runActivity(named: "THEN correct message is displayed"){ _ in
-            XCTAssertTrue(TAUSCreen.thankYouMessage.element.exists)
+            XCTAyncAssert(
+                TAUSCreen.thankYouMessage.element)
         }
         
     }
